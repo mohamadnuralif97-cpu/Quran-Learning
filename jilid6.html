@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iqro' 6 Interaktif — AQSA Study Community</title>
+    <meta name="description" content="Buku digital Iqro' Jilid 6 dengan latihan idghom, iqlab, ikhfa', waqof, qolqolah, dan EBTA.">
+    <meta name="theme-color" content="#1a5f4a">
+    <link rel="preload" as="font" type="font/otf" crossorigin href="https://cdn.jsdelivr.net/gh/raflyfahrezi/KFGQPC-Uthmanic-Script-HAFS-Regular@master/arabic.otf">
+    <style>
+        @font-face{font-family:"KFGQPC HAFS Uthmanic Script";src:url("https://cdn.jsdelivr.net/gh/raflyfahrezi/KFGQPC-Uthmanic-Script-HAFS-Regular@master/arabic.otf") format("opentype");font-display:swap;}
+        :root{--bg:#fff5e6;--bg2:#ffe2c2;--panel:#ffffff;--panel2:#fff1d6;--text:#1a2b2f;--muted:#5a6c72;--emerald:#0aa68a;--emerald2:#16c79a;--gold:#f5a623;--gold2:#ffd166;--rose:#c8541a;--plum:#0f3a3f;--teal:#0a6e5b;--sky:#16c79a;--lime:#a8d96a;--coral:#c8541a;--border:rgba(10,110,91,.22);--shadow:0 22px 50px rgba(10,40,40,.16);--ring:0 0 0 3px rgba(245,166,35,.4);--gradient-hero:linear-gradient(135deg,#0a6e5b 0%,#16c79a 40%,#f5a623 75%,#c8541a 100%);--gradient-gold:linear-gradient(135deg,#c8541a,#f5a623 50%,#ffd166);--gradient-panel:linear-gradient(160deg,#ffffff 0%,#fff1d6 60%,#ffe2c2 100%);--gradient-rainbow:linear-gradient(90deg,#0a6e5b,#16c79a,#f5a623,#c8541a)}
+        body.dark{--bg:#06201f;--bg2:#0b3631;--panel:#0f4541;--panel2:#155b54;--text:#f4ead0;--muted:#c9bce0;--emerald:#34c9b3;--emerald2:#5ee0c8;--gold:#ffd166;--gold2:#ffe29a;--rose:#ff8a3d;--plum:#0f3a3f;--teal:#16c79a;--sky:#34c9b3;--lime:#c8e89e;--coral:#ff8a3d;--border:rgba(255,209,102,.22);--shadow:0 22px 50px rgba(0,0,0,.55);--ring:0 0 0 3px rgba(255,209,102,.4);--gradient-hero:linear-gradient(135deg,#0f3a3f 0%,#16c79a 40%,#ffd166 75%,#ff8a3d 100%);--gradient-gold:linear-gradient(135deg,#ff8a3d,#ffd166);--gradient-panel:linear-gradient(160deg,#0f3a3f 0%,#155b54 100%);--gradient-rainbow:linear-gradient(90deg,#34c9b3,#ffd166,#ff8a3d)}
+        *{box-sizing:border-box}html{scroll-behavior:smooth}
+        body{margin:0;font-family:"Comic Sans MS","Trebuchet MS",system-ui,sans-serif;background:radial-gradient(circle at 8% 0%,rgba(10,110,91,.22),transparent 42%),radial-gradient(circle at 92% 6%,rgba(245,166,35,.22),transparent 40%),radial-gradient(circle at 50% 100%,rgba(200,84,26,.16),transparent 55%),radial-gradient(circle at 20% 80%,rgba(255,209,102,.2),transparent 45%),linear-gradient(180deg,var(--bg),var(--bg2));color:var(--text);line-height:1.85;overflow-x:hidden}
+        a{color:inherit}img{max-width:100%;display:block}button,input,textarea{font:inherit}button{cursor:pointer}
+        .navbar{display:flex;justify-content:space-between;align-items:center;padding:1rem 2rem;background:rgba(255,255,255,.95);backdrop-filter:blur(10px);box-shadow:0 4px 12px rgba(0,0,0,.1);position:sticky;top:0;z-index:100;border-bottom:1px solid var(--border)}
+        body.dark .navbar{background:rgba(15,36,25,.95);border-bottom-color:rgba(255,209,102,.2)}
+        .navbar-brand{display:flex;align-items:center;gap:0.75rem;font-size:1.3rem;font-weight:700;color:var(--teal);text-decoration:none}
+        .navbar-brand span{display:none}
+        .brand-icon{width:35px;height:35px;background:var(--gradient-hero);border-radius:8px;display:flex;align-items:center;justify-content:center;color:white;font-family:"KFGQPC HAFS Uthmanic Script",serif;font-size:1.2rem}
+        .navbar-actions{display:flex;gap:1rem}
+        .navbar-btn{padding:.5rem 1rem;border:none;background:var(--panel);border-radius:8px;cursor:pointer;transition:all .3s;color:var(--text)}
+        .navbar-btn:hover{background:var(--gold);color:white}
+        .app{min-height:100vh;display:grid;grid-template-columns:280px 1fr}
+        .sidebar{position:sticky;top:70px;height:calc(100vh - 70px);padding:20px;border-right:1px solid var(--border);background:linear-gradient(180deg,var(--panel),var(--panel2));overflow-y:auto;backdrop-filter:blur(14px)}
+        .brand{display:flex;align-items:center;gap:12px;margin-bottom:16px}
+        .brand-mark{width:50px;height:50px;border-radius:12px;background:var(--gradient-hero);color:white;display:grid;place-items:center;box-shadow:var(--shadow);font-weight:700;font-size:1.3rem;font-family:"KFGQPC HAFS Uthmanic Script",serif}
+        .brand h1{margin:0;font-size:1rem;line-height:1.2}.brand p{margin:2px 0 0;color:var(--muted);font-size:.8rem}
+        .panel{background:linear-gradient(180deg,var(--panel),var(--panel2));border:1px solid var(--border);border-radius:16px;box-shadow:var(--shadow)}
+        .side-group{padding:14px;margin-bottom:12px}
+        .side-title{margin:0 0 8px;font-size:.8rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}
+        .toc{display:grid;gap:6px;max-height:300px;overflow-y:auto}
+        .toc a{display:flex;justify-content:space-between;align-items:center;padding:8px 10px;border-radius:10px;text-decoration:none;border:1px solid transparent;background:transparent;color:var(--text);font-size:.9rem;transition:all .2s}
+        .toc a:hover,.toc a.active{border-color:rgba(15,76,93,.28);background:rgba(15,76,93,.10)}
+        .toc small{color:var(--muted);font-size:.75rem}
+        .search input,.note-box textarea{width:100%;padding:10px 12px;border-radius:12px;border:1px solid var(--border);background:var(--panel);color:var(--text);outline:none;font-size:.9rem}
+        .search input:focus,.note-box textarea:focus{box-shadow:var(--ring);border-color:rgba(15,76,93,.45)}
+        .note-box textarea{min-height:90px;resize:vertical}
+        .mini-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
+        .mini-actions button,.top-btn,.primary-btn,.ghost-btn,.quiz-opt{border:1px solid var(--border);border-radius:10px;padding:8px 12px;background:var(--panel);color:var(--text);transition:transform .2s ease,background .2s ease,border-color .2s ease;font-size:.85rem}
+        .mini-actions button:hover,.top-btn:hover,.primary-btn:hover,.ghost-btn:hover,.quiz-opt:hover{transform:translateY(-1px);border-color:rgba(201,143,45,.5)}
+        .primary-btn{background:linear-gradient(135deg,var(--emerald),var(--gold) 60%,var(--coral));color:white;border-color:transparent;box-shadow:0 6px 16px rgba(10,110,91,.3)}
+        .ghost-btn,.top-btn{background:transparent}
+        .progress-wrap{padding:12px;margin-bottom:12px}
+        .progress-label{display:flex;justify-content:space-between;align-items:center;font-size:.8rem;color:var(--muted)}
+        .bar{height:8px;background:rgba(24,37,47,.10);border-radius:999px;overflow:hidden;margin-top:8px}
+        .bar>span{display:block;height:100%;width:0;background:var(--gradient-rainbow);border-radius:999px;transition:width .3s ease}
+        .main{min-width:0}
+        .topbar{position:sticky;top:0;z-index:20;display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 18px;border-bottom:1px solid var(--border);background:rgba(255,245,230,.88);backdrop-filter:blur(18px)}
+        body.dark .topbar{background:rgba(6,32,31,.88)}
+        .topbar .meta strong{font-size:.95rem}.topbar .meta span{display:block;color:var(--muted);font-size:.75rem}
+        .top-actions{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end}
+        .content{padding:18px;display:grid;gap:16px;max-width:1000px}
+        .chapter{position:relative;padding:24px;border:1px solid var(--border);background:linear-gradient(180deg,var(--panel),var(--panel2));border-radius:18px;box-shadow:var(--shadow);scroll-margin-top:100px;overflow:hidden}
+        .chapter::before{content:"";position:absolute;left:0;right:0;top:0;height:4px;background:var(--gradient-rainbow)}
+        .chapter h2{margin:0 0 6px;font-size:1.4rem}
+        .chapter .pg{display:inline-block;padding:4px 10px;border-radius:999px;background:var(--gradient-gold);color:white;font-weight:700;font-size:.8rem;margin-bottom:10px}
+        .subtitle,.muted,.small{color:var(--muted)}
+        .hero{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:stretch;min-height:420px}
+        .hero h1{margin:.1rem 0 .6rem;font-size:clamp(2rem,4vw,3.5rem);line-height:1}
+        .hero .subtitle{font-size:1rem;line-height:1.6;max-width:50ch}
+        .hero-actions{display:flex;gap:10px;flex-wrap:wrap;margin:16px 0}
+        .hero-meta{display:flex;gap:8px;flex-wrap:wrap}
+        .hero-meta span{padding:6px 10px;border-radius:999px;background:rgba(15,76,93,.10);border:1px solid var(--border);font-size:.8rem}
+        .hero-visual{position:relative;min-height:100%;border-radius:18px;overflow:hidden;border:1px solid var(--border);background:linear-gradient(160deg,#0f3a3f 0%,#0a6e5b 30%,#16c79a 60%,#f5a623 85%,#c8541a 100%);display:grid;place-items:center;color:#fffdf6;padding:24px}
+        .hero-visual .big-arabic{font-family:"KFGQPC HAFS Uthmanic Script",serif;font-size:clamp(4rem,12vw,9rem);line-height:1;text-shadow:0 6px 24px rgba(0,0,0,.35);text-align:center}
+        .hero-visual .big-arabic small{display:block;font-size:.18em;letter-spacing:.3em;margin-top:6px;font-family:"Trebuchet MS",sans-serif}
+        .rule-box{padding:14px 16px;border-radius:14px;border-left:5px solid var(--gold);background:linear-gradient(135deg,rgba(245,166,35,.18),rgba(255,209,102,.22) 60%,rgba(10,110,91,.10));margin-bottom:14px;font-weight:600;font-size:.95rem}
+        .rule-box .label{display:inline-block;padding:3px 9px;border-radius:999px;background:var(--gold);color:white;font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;margin-bottom:6px}
+        .arabic{font-family:"KFGQPC HAFS Uthmanic Script","Amiri Quran","Traditional Arabic",serif;direction:rtl;text-align:right;font-size:1.9rem;line-height:2.2;letter-spacing:0;word-spacing:.04em;color:var(--text);font-feature-settings:"liga","calt","rlig","ccmp";text-rendering:optimizeLegibility}
+        .arabic.center{text-align:center}
+        .arabic-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;direction:rtl}
+        .arabic-grid.cols-2{grid-template-columns:repeat(2,1fr)}
+        .arabic-cell{padding:12px 10px;border:1px solid var(--border);border-radius:12px;background:rgba(255,253,246,.74);text-align:center;font-family:"KFGQPC HAFS Uthmanic Script",serif;font-size:1.5rem;line-height:1.6;direction:rtl;transition:transform .2s,box-shadow .2s}
+        .arabic-cell:hover{transform:translateY(-2px);box-shadow:var(--shadow);border-color:rgba(245,166,35,.45)}
+        body.dark .arabic-cell{background:rgba(15,69,65,.72)}
+        .arabic-lines{display:grid;gap:6px}
+        .arabic-line{padding:10px 14px;border:1px solid var(--border);border-radius:12px;background:rgba(255,253,246,.66);direction:rtl;text-align:right;font-family:"KFGQPC HAFS Uthmanic Script",serif;font-size:1.6rem;line-height:2.1}
+        body.dark .arabic-line{background:rgba(15,69,65,.66)}
+        .example{display:flex;align-items:center;gap:12px;flex-wrap:wrap;padding:10px 14px;border-radius:12px;background:rgba(22,199,154,.12);border:1px dashed var(--emerald);margin-bottom:10px;font-size:.95rem}
+        .example .arrow{font-size:1.3rem;color:var(--rose);font-weight:700}
+        .example .arabic{font-size:1.7rem;line-height:1.5}
+        .tip{margin-top:10px;padding:9px 12px;border-radius:10px;background:rgba(200,84,26,.12);border:1px solid rgba(200,84,26,.3);font-size:.9rem;line-height:1.5}
+        .quiz-panel{padding:16px;border-radius:16px;border:1px solid var(--border);background:rgba(255,253,246,.74);margin-bottom:12px}
+        body.dark .quiz-panel{background:rgba(15,69,65,.78)}
+        .quiz-q{font-size:1rem;margin:6px 0 10px;font-weight:600}
+        .quiz-options{display:grid;gap:8px}
+        .quiz-opt{width:100%;text-align:left;padding:10px 12px;border-radius:10px;font-size:.9rem}
+        .quiz-opt.selected{background:rgba(15,76,93,.14);border-color:rgba(15,76,93,.45)}
+        .quiz-opt.correct{background:rgba(35,161,88,.22);border-color:rgba(35,161,88,.6)}
+        .quiz-opt.wrong{background:rgba(209,69,69,.18);border-color:rgba(209,69,69,.55)}
+        .score{font-size:2rem;font-weight:700;color:var(--emerald)}
+        .quiz-controls{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px;align-items:center}
+        .reading-progress{position:fixed;left:0;top:0;height:3px;width:100%;z-index:60;background:rgba(0,0,0,.05)}
+        .reading-progress span{display:block;height:100%;width:0;background:var(--gradient-rainbow)}
+        .scrim{display:none}.mobile-only{display:none}
+        .footer-note{font-size:.8rem;color:var(--muted);margin-top:6px}
+        .back-btn{display:inline-flex;align-items:center;gap:6px;margin-bottom:16px;padding:8px 12px;background:var(--panel);border:1px solid var(--border);border-radius:10px;text-decoration:none;color:var(--text);font-weight:600;transition:all .3s}
+        .back-btn:hover{background:var(--gold);color:white;border-color:var(--gold)}
+        .waqof-table{width:100%;border-collapse:separate;border-spacing:0;margin:10px 0;border-radius:12px;overflow:hidden;border:1px solid var(--border)}
+        .waqof-table td,.waqof-table th{padding:10px 12px;border-bottom:1px solid var(--border);text-align:center;background:rgba(255,253,246,.66);font-size:.9rem}
+        body.dark .waqof-table td,body.dark .waqof-table th{background:rgba(15,69,65,.66)}
+        .waqof-table .sym{font-family:"KFGQPC HAFS Uthmanic Script",serif;font-size:1.4rem;color:var(--rose)}
+        @media (max-width:1180px){.app{grid-template-columns:1fr}.sidebar{position:fixed;left:0;top:70px;bottom:0;width:min(88vw,280px);transform:translateX(-102%);transition:transform .25s ease;z-index:50;box-shadow:var(--shadow);height:calc(100vh - 70px)}body.sidebar-open .sidebar{transform:translateX(0)}.scrim{position:fixed;inset:0;background:rgba(0,0,0,.32);z-index:40;display:none;top:70px}body.sidebar-open .scrim{display:block}.hero{grid-template-columns:1fr}.mobile-only{display:inline-flex}}
+        @media (max-width:720px){.topbar,.content{padding-left:12px;padding-right:12px}.chapter{padding:16px}.arabic-grid{grid-template-columns:repeat(2,1fr)}.arabic-cell{font-size:1.3rem}.arabic-line{font-size:1.4rem;line-height:1.9}.hero-visual{min-height:260px}.navbar{padding:.8rem}.navbar-brand span{display:inline}.hero h1{font-size:1.8rem}}
+    </style>
+</head>
+<body>
+<div class="reading-progress"><span id="readingBar"></span></div>
+<div class="scrim" id="scrim"></div>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+    <a href="index.html" class="navbar-brand">
+        <div class="brand-icon">ج٦</div>
+        <span>Iqro' 6</span>
+    </a>
+    <div class="navbar-actions">
+        <button class="navbar-btn mobile-only" id="sidebarToggle">☰</button>
+        <button class="navbar-btn" id="jumpBookmark">⭢</button>
+        <button class="navbar-btn" id="themeToggle">◐</button>
+    </div>
+</nav>
+
+<div class="app">
+<aside class="sidebar" id="sidebar">
+    <div class="brand">
+        <div class="brand-mark">ج٦</div>
+        <div><h1>Iqro' 6</h1><p>AQSA Study</p></div>
+    </div>
+    <div class="panel side-group progress-wrap">
+        <div class="progress-label"><span>Progress</span><strong id="progressText">0%</strong></div>
+        <div class="bar"><span id="progressFill"></span></div>
+    </div>
+    <div class="panel side-group search">
+        <p class="side-title">Cari Materi</p>
+        <input id="searchBox" type="search" placeholder="iqlab, ikhfa', waqof...">
+        <div style="font-size:.8rem;color:var(--muted);margin-top:6px;min-height:16px" id="searchResults">Ketik untuk cari.</div>
+    </div>
+    <div class="panel side-group">
+        <p class="side-title">Daftar Halaman</p>
+        <nav class="toc" id="toc"></nav>
+    </div>
+    <div class="panel side-group note-box">
+        <p class="side-title">Catatan</p>
+        <textarea id="noteField" placeholder="Tulis catatan..."></textarea>
+        <div class="mini-actions">
+            <button class="ghost-btn" id="clearNote">Hapus</button>
+            <button class="primary-btn" id="saveBookmark">Bookmark</button>
+        </div>
+        <div class="footer-note" id="noteStatus">Tersimpan.</div>
+    </div>
+</aside>
+
+<div class="main">
+    <main class="content" id="contentRoot">
+        <a href="index.html" class="back-btn">← Kembali ke Beranda</a>
+    </main>
+</div>
+</div>
+
+<script>
+const PAGES = [
+  { n:1, title:"Idghom bighunnah → و (Nun sukun/tanwin bertemu Wawu)", rule:"Masuk dengan dengung — ditekan & ditahan 2 harokat.",
+    example:{a:"عَنْ ⟵ وَالِدٍ", arrow:"·", b:"مِنْ ⟵ وَاحِدٍ"},
+    lines:[
+      "حَبًّا وَنَبَاتًا ۝ سِرَاجًا وَهَّاجًا ۝ زَجْرَةٌ وَاحِدَةٌ ۝",
+      "رَحْمَةً وَعِلْمًا ۝ عَدُوًّا وَحُزْنًا ۝",
+      "وَإِلٰهُكُمْ إِلٰهٌ وَاحِدٌ ۝ مِنْ وَرَائِهِمْ مُحِيْطٌ ۝",
+      "أَحْسَنُ أَثَاثًا وَرِئْيًا ۝ كَانَ فَاحِشَةً وَمَقْتًا ۝"
+    ] },
+  { n:7, title:"Iqlab — Nun sukun / tanwin bertemu ب", rule:"Nun sukun ( نْ ) atau tanwin bertemu huruf ب → bunyi nun berubah menjadi MIM dengan dengung 2 harokat (iqlab).",
+    example:{a:"مِنْۢ بَعْدِ", arrow:"·", b:"نُوْرٌۢ بَيْتِيْ"},
+    grid3:[
+      ["اَبَدًاۢ بِمَا","كَافِرٌۢ بِهٖ","عِوَانٌۢ بَيْنَ"],
+      ["الْاَنْۢبِيَآءِ","وَضَآئِقٌۢ بِهٖ","مِنْۢ بَأْسٍ"],
+      ["بِغَيٰبِيْنَهُمْ","حَلٌّۢ بِهٰذَا","لَجَنْۢبِهٖ"]
+    ] },
+  { n:11, title:"Ikhfa' Haqiqi — 15 huruf (ت ث)", rule:"Dibaca samar-samar & dengung bila nun sukun / tanwin bertemu dengan salah satu dari 15 huruf ikhfa'.",
+    example:{a:"(۱) ت ⟵ اَنْتَ", arrow:"·", b:"(۲) ث ⟵ بِالْاُنْثٰى"},
+    lines:[
+      "مَنْ تَطَوَّعَ ۝ اَنْ تَقُوْلُوْا ۝ اَوْ اَكْنَنْتُمْ ۝",
+      "جَنّٰتٍ تَجْرِيْ مِنْ تَحْتِهَا الْاَنْهٰرُ خٰلِدِيْنَ فِيْهَا ۝"
+    ] },
+  { n:19, title:"Tanda-tanda Waqof", rule:"Pengenalan tanda-tanda waqof yang sering ditemui ketika tadarus Al-Qur'an.",
+    lines:[
+      "فَتَوَلَّ عَنْهُمْ ۘ يَوْمَ يَدْعُ الدَّاعِ اِلٰى شَيْءٍ نُّكُرٍ ۝",
+      "وَاِنَّ رَبَّكَ هُوَ يَحْشُرُهُمْ ۗ اِنَّهٗ حَكِيْمٌ عَلِيْمٌ ۝"
+    ] },
+  { n:21, title:"Waqof pada nun bertasydid (نَّ)", rule:"Cara mewaqofkan: suara \"hun\" ditekan dan ditahan 2 harokat.",
+    example:{a:"لَهُنَّ", arrow:"⟵", b:"\"hun\" ditahan 2 harokat"},
+    lines:[
+      "هُنَّ لِبَاسٌ لَّكُمْ وَاَنْتُمْ لِبَاسٌ لَّهُنَّ ۝",
+      "عَلِمَ اللّٰهُ اَنَّكُمْ كُنْتُمْ تَخْتَانُوْنَ اَنْفُسَكُمْ فَتَابَ عَلَيْكُمْ وَعَفَا عَنْكُمْ ۝"
+    ] },
+  { n:24, title:"Qolqolah pada huruf bertasydid", rule:"Huruf-huruf qolqolah bertasydid bila diwaqofkan: ditekan suaranya, ditahan 2 harokat, diikuti qolqolah.",
+    example:{a:"وَتَبَّ", arrow:"⟵", b:"ditekan + qolqolah"},
+    lines:[
+      "رَبِّ احْكُمْ بِالْحَقِّ ۝",
+      "اَبِيْ لَهَبٍ وَّتَبَّ ۝ مَوَاقِيْتُ لِلنَّاسِ وَالْحَجِّ ۝"
+    ] },
+];
+
+const EBTA_LINES = [
+  "بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ ۝ الٓمٓ ۝",
+  "ذٰلِكَ الْكِتٰبُ لَا رَيْبَ ۛ فِيْهِ ۛ هُدًى لِّلْمُتَّقِيْنَ ۝",
+  "وَلَقَدْ اٰتَيْنَا لُقْمٰنَ الْحِكْمَةَ اَنِ اشْكُرْ لِلّٰهِ ۗ",
+  "وَمَنْ يَّشْكُرْ فَاِنَّمَا يَشْكُرُ لِنَفْسِهٖ ۚ وَمَنْ كَفَرَ فَاِنَّ اللّٰهَ غَنِيٌّ حَمِيْدٌ ۝"
+];
+
+const QUIZ = [
+  { q:"Nun sukun / tanwin bertemu ب dibaca...", o:["Idghom bighunnah","Iqlab (suara berubah jadi mim)","Idzhar","Idghom bilaghunnah"], a:1 },
+  { q:"Ikhfa' haqiqi memiliki berapa huruf?", o:["10","12","15","17"], a:2 },
+  { q:"Nun sukun bertemu Wawu (و) atau Ya (ي) dibaca...", o:["Ikhfa'","Idghom bighunnah","Iqlab","Idzhar"], a:1 },
+  { q:"Tanda waqof م (mim kecil) artinya...", o:["Boleh waqof / terus","Harus waqof","Tidak boleh waqof","Terus lebih utama"], a:1 },
+  { q:"Huruf qolqolah bertasydid bila diwaqofkan dibaca...", o:["Langsung qolqolah","Ditekan, ditahan 2 harokat, lalu qolqolah","Dibaca tipis tanpa pantulan","Dibaca panjang 6 harokat"], a:1 },
+  { q:"Waqof pada tanwin fathah (ـً) dibaca...", o:["Sukun","Dengung","Dipanjangkan \"aa..\" 2 harokat","Berubah jadi mim"], a:2 }
+];
+
+const root = document.getElementById('contentRoot');
+const toc = document.getElementById('toc');
+
+function tocLink(id, label, sub){
+  const a = document.createElement('a');
+  a.href = '#'+id; a.dataset.target = id;
+  a.innerHTML = `<span>${label}</span><small>${sub}</small>`;
+  toc.appendChild(a);
+}
+tocLink('cover','Sampul','Iqro\' 6');
+
+function arabicGrid(rows, cols){
+  const cls = cols===2 ? 'arabic-grid cols-2' : 'arabic-grid';
+  const cells = rows.flatMap(r=>r.map(c => c ? `<div class="arabic-cell">${c}</div>` : `<div></div>`)).join('');
+  return `<div class="${cls}">${cells}</div>`;
+}
+function arabicLines(lines){
+  return `<div class="arabic-lines">${lines.map(l=>`<div class="arabic-line">${l}</div>`).join('')}</div>`;
+}
+
+PAGES.forEach(p => {
+  const id = 'hal'+p.n;
+  tocLink(id, 'Hal '+p.n, p.title);
+  const sec = document.createElement('section');
+  sec.className = 'chapter'; sec.id = id;
+  let body = `<span class="pg">Halaman ${p.n}</span><h2>${p.title}</h2>`;
+  if (p.rule) body += `<div class="rule-box"><span class="label">Kaidah</span><div>${p.rule}</div></div>`;
+  if (p.example) body += `<div class="example"><span class="arabic">${p.example.a}</span><span class="arrow">${p.example.arrow}</span><span class="arabic">${p.example.b}</span></div>`;
+  if (p.grid3) body += arabicGrid(p.grid3, 3);
+  if (p.grid2) body += arabicGrid(p.grid2, 2);
+  if (p.lines) body += arabicLines(p.lines);
+  body += `<div class="tip">💡 Bacalah pelan-pelan dengan tartil. Jika belum lancar, ulangi baris yang sama beberapa kali sebelum lanjut.</div>`;
+  sec.innerHTML = body;
+  root.appendChild(sec);
+});
+
+tocLink('ebta','EBTA','Evaluasi');
+const ebta = document.createElement('section');
+ebta.className='chapter'; ebta.id='ebta';
+ebta.innerHTML = `<span class="pg">EBTA</span><h2>Evaluasi Akhir Jilid 6 — Surat Luqman</h2>
+<div class="rule-box"><span class="label">Catatan</span><div>EBTA jilid 6 ini adalah evaluasi akhir untuk menilai kemampuan bacaan santri.</div></div>
+${arabicLines(EBTA_LINES)}`;
+root.appendChild(ebta);
+
+tocLink('kuis','Kuis','6 soal');
+const quiz = document.createElement('section');
+quiz.className='chapter'; quiz.id='kuis';
+quiz.innerHTML = `<span class="pg">Kuis</span><h2>Kuis Singkat Jilid 6</h2><p class="muted">Jawab 6 pertanyaan untuk mengukur pemahaman kaidah tajwid pada jilid ini.</p><div id="quizBox"></div><div class="quiz-controls"><button class="primary-btn" id="quizSubmit">Cek Jawaban</button><button class="ghost-btn" id="quizReset">Ulangi</button><div class="score" id="quizScore"></div></div>`;
+root.appendChild(quiz);
+
+const quizBox = quiz.querySelector('#quizBox');
+function renderQuiz(){
+  quizBox.innerHTML = QUIZ.map((it,i)=>`
+    <div class="quiz-panel" data-i="${i}">
+      <strong>Soal ${i+1}.</strong>
+      <p class="quiz-q">${it.q}</p>
+      <div class="quiz-options">${it.o.map((op,j)=>`<button class="quiz-opt" data-j="${j}">${op}</button>`).join('')}</div>
+    </div>`).join('');
+  quizBox.querySelectorAll('.quiz-panel').forEach(panel=>{
+    panel.querySelectorAll('.quiz-opt').forEach(btn=>{
+      btn.addEventListener('click', ()=>{
+        panel.querySelectorAll('.quiz-opt').forEach(b=>b.classList.remove('selected'));
+        btn.classList.add('selected');
+      });
+    });
+  });
+}
+renderQuiz();
+quiz.querySelector('#quizSubmit').addEventListener('click', ()=>{
+  let score = 0;
+  quizBox.querySelectorAll('.quiz-panel').forEach(panel=>{
+    const i = +panel.dataset.i;
+    const sel = panel.querySelector('.quiz-opt.selected');
+    panel.querySelectorAll('.quiz-opt').forEach((b,j)=>{
+      b.classList.remove('correct','wrong');
+      if (j===QUIZ[i].a) b.classList.add('correct');
+      if (sel && b===sel && j!==QUIZ[i].a) b.classList.add('wrong');
+    });
+    if (sel && +sel.dataset.j === QUIZ[i].a) score++;
+  });
+  document.getElementById('quizScore').textContent = `${score}/${QUIZ.length}`;
+});
+quiz.querySelector('#quizReset').addEventListener('click', ()=>{ renderQuiz(); document.getElementById('quizScore').textContent=''; });
+
+const themeToggle = document.getElementById('themeToggle');
+if (localStorage.getItem('aqsa-theme')==='dark'){ document.body.classList.add('dark'); themeToggle.textContent='☀️'; }
+themeToggle.addEventListener('click', ()=>{
+  document.body.classList.toggle('dark');
+  localStorage.setItem('aqsa-theme', document.body.classList.contains('dark')?'dark':'light');
+  themeToggle.textContent = document.body.classList.contains('dark')?'☀️':'◐';
+});
+
+document.getElementById('sidebarToggle')?.addEventListener('click', ()=>document.body.classList.toggle('sidebar-open'));
+document.getElementById('scrim').addEventListener('click', ()=>document.body.classList.remove('sidebar-open'));
+
+const sections = () => [...document.querySelectorAll('.chapter')];
+function updateProgress(){
+  const scrolled = window.scrollY;
+  const total = document.body.scrollHeight - window.innerHeight;
+  const pct = Math.min(100, Math.max(0, Math.round(scrolled/total*100)));
+  document.getElementById('progressFill').style.width = pct+'%';
+  document.getElementById('progressText').textContent = pct+'%';
+  document.getElementById('readingBar').style.width = pct+'%';
+  let current = sections()[0]?.id;
+  sections().forEach(s=>{ if (s.getBoundingClientRect().top < 140) current = s.id; });
+  toc.querySelectorAll('a').forEach(a=>a.classList.toggle('active', a.dataset.target===current));
+}
+window.addEventListener('scroll', updateProgress, {passive:true});
+updateProgress();
+
+const note = document.getElementById('noteField');
+note.value = localStorage.getItem('aqsa-note-6') || '';
+note.addEventListener('input', ()=>{ localStorage.setItem('aqsa-note-6', note.value); document.getElementById('noteStatus').textContent='Tersimpan ✓'; });
+document.getElementById('clearNote').addEventListener('click', ()=>{ note.value=''; localStorage.removeItem('aqsa-note-6'); document.getElementById('noteStatus').textContent='Kosong.'; });
+
+document.getElementById('saveBookmark').addEventListener('click', ()=>{
+  let current = sections()[0].id;
+  sections().forEach(s=>{ if (s.getBoundingClientRect().top < 140) current = s.id; });
+  localStorage.setItem('aqsa-bookmark-6', current);
+  document.getElementById('noteStatus').textContent = '📍 '+current;
+});
+document.getElementById('jumpBookmark').addEventListener('click', ()=>{
+  const b = localStorage.getItem('aqsa-bookmark-6');
+  if (b) document.getElementById(b)?.scrollIntoView({behavior:'smooth'});
+});
+
+const search = document.getElementById('searchBox');
+const searchResults = document.getElementById('searchResults');
+search.addEventListener('input', ()=>{
+  const q = search.value.trim().toLowerCase();
+  if (!q){ searchResults.textContent='Ketik untuk cari.'; return; }
+  let hits = 0;
+  sections().forEach(sec=>{ if (sec.textContent.toLowerCase().includes(q)) hits++; });
+  searchResults.textContent = hits ? `${hits} halaman cocok.` : 'Tidak ditemukan.';
+});
+search.addEventListener('keydown', e=>{
+  if (e.key==='Enter'){
+    const q = search.value.trim().toLowerCase();
+    const found = sections().find(s=>s.textContent.toLowerCase().includes(q));
+    if (found) found.scrollIntoView({behavior:'smooth'});
+  }
+});
+
+toc.addEventListener('click', e=>{ if (e.target.closest('a')) document.body.classList.remove('sidebar-open'); });
+</script>
+</body>
+</html>
